@@ -1,0 +1,18 @@
+meta {
+  name: LOGOUT
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_URL}}/api/auth/logout
+  body: formUrlEncoded
+  auth: none
+}
+
+body:multipart-form {
+  username: johnsmith
+  fullname: John Smith
+  password: 1234
+  ~email: jane@email.com
+}

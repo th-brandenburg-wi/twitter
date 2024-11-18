@@ -1,0 +1,25 @@
+meta {
+  name: SIGNUP
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_URL}}/api/auth/signup
+  body: formUrlEncoded
+  auth: none
+}
+
+body:form-urlencoded {
+  username: jsmith
+  email: jsmith@web.de
+  fullName: John Smith
+  password: 123456
+}
+
+body:multipart-form {
+  username: johnsmith
+  fullname: John Smith
+  password: 1234
+  ~email: jane@email.com
+}

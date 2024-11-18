@@ -1,0 +1,23 @@
+meta {
+  name: LOGIN
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_URL}}/api/auth/login
+  body: formUrlEncoded
+  auth: none
+}
+
+body:form-urlencoded {
+  username: jsmith
+  password: 123456
+}
+
+body:multipart-form {
+  username: johnsmith
+  fullname: John Smith
+  password: 1234
+  ~email: jane@email.com
+}
