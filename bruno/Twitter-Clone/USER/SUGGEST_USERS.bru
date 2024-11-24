@@ -1,0 +1,16 @@
+meta {
+  name: SUGGEST_USERS
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_URL}}/api/user/suggest
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  luisa_id: 673b8234620039608db3c846
+  john_id: 673a83e382a84981f36df696
+}

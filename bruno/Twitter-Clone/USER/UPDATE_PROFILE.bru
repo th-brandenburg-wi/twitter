@@ -1,0 +1,23 @@
+meta {
+  name: UPDATE_PROFILE
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_URL}}/api/user/update
+  body: formUrlEncoded
+  auth: none
+}
+
+body:form-urlencoded {
+  email: jsmith@gmail.com
+  currentPassword: 123456
+}
+
+body:multipart-form {
+  username: johnsmith
+  fullname: John Smith
+  password: 1234
+  ~email: jane@email.com
+}
