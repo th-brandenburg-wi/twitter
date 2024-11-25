@@ -52,6 +52,13 @@ link: {
     type: String,
     default: "",
 },
+likedPost: [
+    {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Post",
+        default: []
+    }
+]
 
 }, {timestamps: true});
 

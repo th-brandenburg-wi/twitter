@@ -1,0 +1,19 @@
+meta {
+  name: CREATE_POST
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_URL}}/api/post/create
+  body: formUrlEncoded
+  auth: none
+}
+
+body:form-urlencoded {
+  text: my first post
+}
+
+vars:post-response {
+  created_post_id: res.body._id
+}

@@ -1,0 +1,15 @@
+meta {
+  name: LIKE_UNLIKE_POST
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_URL}}/api/post/like/{{post_id}}
+  body: formUrlEncoded
+  auth: none
+}
+
+vars:pre-request {
+  post_id: 6743cd64781f795513991d42
+}

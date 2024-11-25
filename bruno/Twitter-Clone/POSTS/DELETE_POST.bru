@@ -1,0 +1,23 @@
+meta {
+  name: DELETE_POST
+  type: http
+  seq: 2
+}
+
+delete {
+  url: {{base_URL}}/api/post/delete/{{post_id}}
+  body: formUrlEncoded
+  auth: none
+}
+
+body:form-urlencoded {
+  text: my first post
+}
+
+vars:pre-request {
+  post_id: 6743bd69d6161f40ef740aae
+}
+
+vars:post-response {
+  ~created_post_id: res.body._id
+}

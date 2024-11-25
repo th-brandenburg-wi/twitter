@@ -1,0 +1,15 @@
+meta {
+  name: ALL_FOLLOWING_POSTS
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{base_URL}}/api/post/following/{{user_id}}
+  body: formUrlEncoded
+  auth: none
+}
+
+vars:pre-request {
+  user_id: 6743cd3a781f795513991d37
+}

@@ -1,0 +1,11 @@
+meta {
+  name: ALL_POSTS
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base_URL}}/api/post/all
+  body: formUrlEncoded
+  auth: none
+}

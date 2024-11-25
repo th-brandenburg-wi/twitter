@@ -1,0 +1,19 @@
+meta {
+  name: COMMENT_POST
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_URL}}/api/post/comment/{{post_id}}
+  body: formUrlEncoded
+  auth: none
+}
+
+body:form-urlencoded {
+  text: my first comment
+}
+
+vars:pre-request {
+  post_id: 6743bd69d6161f40ef740aae
+}
